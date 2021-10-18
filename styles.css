@@ -603,6 +603,10 @@ video {
   width: 100%;
 }
 
+.flex-initial {
+  flex: 0 1 auto;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -617,6 +621,11 @@ video {
 
 .gap-3 {
   gap: 0.75rem;
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
 }
 
 .text-white {
