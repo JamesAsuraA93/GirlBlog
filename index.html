@@ -2,23 +2,74 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Page Title</title>
+<title>Mail_Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Roughly 155 characters">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="script.js"></script>
 <link href="/styles.css" rel="stylesheet">
 </head>
-<body>
-<h1 class="flex flex-col w-full justify-center items-center">Hello</h1>
-<div class="font-sm text-white">Hello</div>
-<nav class="flex items-center justify-center">
-    <h1 class="flex gap-3">
-        asdasd
-    </h1>
-    <h2 class="flex flex-initial text-9xl">
-        asdasdasd
-    </h2>
+<body class="h-screen w-screen">
+<nav class="flex flex-row w-full justify-between h-[110px] items-center "
+style="background-color: rgb(230, 202, 202);">
+    <div>
+        <h1 class="ml-9 text-[30px] text-white">
+            MeMail
+        </h1>
+    </div>
+    <div class="flex flex-row gap-20 mr-12 text-[30px] text-white">
+        <div>
+            <a href="/index.html">
+                <h3">
+                    Home
+                </h3>
+            </a>
+        </div>
+        <div>
+            <a href="/about.html">
+                <h3>
+                    About
+                </h3>
+            </a>
+        </div>
+        <div>
+            <a href="/gallery.html">
+                <h3>
+                    Gallery
+                </h3>
+            </a>
+        </div>
+        <div>
+            <a href="/contact.html">
+                <h3>
+                    Contact
+                </h3>
+            </a>
+        </div>
+    </div>
 </nav>
+<content class="grid grid-cols-3 w-full h-[630px]"
+style="background-image: url('/images/bg_home.png');
+       background-position: 70%;
+       background-size: 100%;">
+    <div class="flex overflow-visible">
+        <img src="/images/48222.jpg" alt="Mail"
+         height="630px">
+    </div>
+    <div class="col-span-2 flex flex-col justify-center items-center gap-6 mx-[200px]">
+        <div class="text-[50px] pr-[310px]">
+            <h2 >Hello . . .
+            </h2>
+            <h2 class="pl-20">I'm mail
+            </h2>
+        </div>
+        <div>
+            <p class="text-[30px]">Bienvenue sur mon site web. Dans ce site, <br>
+                vous apprendrez à connaître mon vrai moi. <br>
+                Je suis heureux de partager mon identité <br>
+                avec tout le monde.</p>
+        </div>
+    </div>
+</content>
 </body>
 </html>

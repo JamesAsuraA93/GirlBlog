@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mail_Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Roughly 155 characters">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <link href="/styles.css" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body class="h-screen w-screen">
+    <nav class="flex flex-row w-full justify-between h-[110px] items-center "
+        style="background-color: rgb(230, 202, 202);">
+        <div>
+            <h1 class="ml-9 text-[30px] text-white">
+                MeMail
+            </h1>
+        </div>
+        <div class="flex flex-row gap-20 mr-12 text-[30px] text-white">
+            <div>
+                <a href="/index.html">
+                    <h3">
+                        Home
+                        </h3>
+                </a>
+            </div>
+            <div>
+                <a href="/about.html">
+                    <h3>
+                        About
+                    </h3>
+                </a>
+            </div>
+            <div>
+                <a href="/gallery.html">
+                    <h3>
+                        Gallery
+                    </h3>
+                </a>
+            </div>
+            <div>
+                <a href="/contact.html">
+                    <h3>
+                        Contact
+                    </h3>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <content class="flex flex-col w-full h-[630px]">
+        <h1 class="flex items-center justify-center mt-6 text-[30px]">Contact</h1>
+        <div class="flex flex-row items-center justify-center">
+            <button onclick="decrese()">
+                <ion-icon name="chevron-back-outline" size="large"></ion-icon>
+            </button>
+            <img id="MoveImage" src="/images/48233.jpg" alt="long" width="50%" height="50%">
+            <button onclick="increse()">
+                <ion-icon size="large" name="chevron-forward-outline"></ion-icon>
+            </button>
+        </div>
+        <div class="flex flex-row justify-around">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+    </content>
+    <script>
+        const Pics = ["/images/48233.jpg", "/images/48222.jpg"]
+        class CountState {
+            constructor() {
+                this.count = 0;
+                this.handlers = [];
+            }
+            subscribe(observer) {
+                this.handlers.push(observer);
+            }
+
+            increse() {
+                if(this.count < Pics.length - 1){
+                    this.count++;
+                    this.handlers.forEach((handler) => handler(this.count));
+                }
+            }
+            decrese() {
+                if(this.count > 0){
+                    this.count--;
+                    this.handlers.forEach((handler) => handler(this.count));
+                }
+            }
+        }
+
+        const countState = new CountState();
+
+        countState.subscribe((count) => {
+            document.getElementById("MoveImage").src = Pics[count]
+        });
+
+        function increse() {
+            countState.increse();
+        }
+        function decrese() {
+            countState.decrese();
+        }
+
+    </script>
+</body>
+
+</html>

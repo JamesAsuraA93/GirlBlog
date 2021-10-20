@@ -595,16 +595,116 @@ video {
   display: none;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.mx-\[80px\] {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.my-\[30px\] {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.mx-\[200px\] {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.ml-9 {
+  margin-left: 2.25rem;
+}
+
+.mr-12 {
+  margin-right: 3rem;
+}
+
+.mt-\[130px\] {
+  margin-top: 130px;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .flex {
   display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-\[110px\] {
+  height: 110px;
+}
+
+.h-\[630px\] {
+  height: 630px;
+}
+
+.h-\[400px\] {
+  height: 400px;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .w-full {
   width: 100%;
 }
 
-.flex-initial {
-  flex: 0 1 auto;
+.w-\[400px\] {
+  width: 400px;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -615,17 +715,61 @@ video {
   align-items: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
 
-.gap-3 {
-  gap: 0.75rem;
+.justify-between {
+  justify-content: space-between;
 }
 
-.text-9xl {
-  font-size: 8rem;
-  line-height: 1;
+.justify-around {
+  justify-content: space-around;
+}
+
+.gap-20 {
+  gap: 5rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+}
+
+.pl-20 {
+  padding-left: 5rem;
+}
+
+.pr-\[310px\] {
+  padding-right: 310px;
+}
+
+.text-\[30px\] {
+  font-size: 30px;
+}
+
+.text-\[40px\] {
+  font-size: 40px;
+}
+
+.text-\[20px\] {
+  font-size: 20px;
+}
+
+.text-\[50px\] {
+  font-size: 50px;
 }
 
 .text-white {
