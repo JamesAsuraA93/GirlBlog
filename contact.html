@@ -11,12 +11,13 @@
     <link href="/styles.css" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Martel&display=swap" rel="stylesheet"></head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Martel&display=swap"
+        rel="stylesheet">
+</head>
 
-<body class="h-screen w-screen"
-style="font-family: 'Dancing Script', cursive;">
+<body class="h-screen w-screen min-w-[1430px] min-h-[]" style="font-family: 'Dancing Script', cursive;">
     <nav class="flex flex-row w-full justify-between h-[110px] items-center "
         style="background-color: rgb(230, 202, 202);">
         <div>
@@ -24,7 +25,7 @@ style="font-family: 'Dancing Script', cursive;">
                 MeMail
             </h1>
         </div>
-        <div class="flex flex-row gap-20 mr-12 text-[30px] text-white">
+        <div class="flex flex-row gap-20 mr-12 text-[40px] text-white">
             <div>
                 <a href="/index.html">
                     <h3">
@@ -56,24 +57,44 @@ style="font-family: 'Dancing Script', cursive;">
         </div>
     </nav>
     <content class="flex flex-col w-full h-[630px]">
-        <h1 class="flex items-center justify-center mt-6 text-[30px]">Contact</h1>
+        <h1 class="flex items-center justify-center mt-6 text-[40px]">Contact</h1>
         <div class="flex flex-row items-center justify-center">
             <button onclick="decrese()">
                 <ion-icon name="chevron-back-outline" size="large"></ion-icon>
             </button>
-            <img id="MoveImage" src="/images/48233.jpg" alt="long" width="50%" height="50%">
+            <img id="MoveImage" src="/images/contactPic/bg1.png" alt="long" width="50%" height="50%">
             <button onclick="increse()">
                 <ion-icon size="large" name="chevron-forward-outline"></ion-icon>
             </button>
         </div>
-        <div class="flex flex-row justify-around">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
+        <div class="flex flex-row justify-center items-center gap-10 mt-6">
+
+            <a href="https://www.instagram.com/ivwmaii/?hl=th" target="blank_">
+                <img src="/images/Logo/Instagram.png" alt="instagram" height="90px" width="90px">
+            </a>
+            <a href="https://www.instagram.com/ivwmaii/?hl=th" target="blank_">
+                <h2 class="text-[50px]">ivwmaii</h2>
+            </a>
+
+
+            <a href="https://www.facebook.com/profile.php?id=100010175110811" target="blank_">
+                <img src="/images/Logo/Facebook.png" alt="facebook" height="90px" width="90px">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100010175110811" target="blank_">
+                <h2 class="text-[50px]">Thaninee Navawongs</h2>
+            </a>
+
+            <a href="tel:064-665-6322">
+                <img src="/images/Logo/phone.png" alt="phone" height="90px" width="90px">
+            </a>
+            <a href="tel:064-665-6322">
+                <h2 class="text-[30px]">064-665-6322</h2>
+            </a>
+
         </div>
     </content>
     <script>
-        const Pics = ["/images/48233.jpg", "/images/48222.jpg"]
+        const Pics = ["/images/contactPic/bg1.png", "/images/contactPic/bg2.png", "/images/contactPic/bg3.png"]
         class CountState {
             constructor() {
                 this.count = 0;
@@ -84,13 +105,13 @@ style="font-family: 'Dancing Script', cursive;">
             }
 
             increse() {
-                if(this.count < Pics.length - 1){
+                if (this.count < Pics.length - 1) {
                     this.count++;
                     this.handlers.forEach((handler) => handler(this.count));
                 }
             }
             decrese() {
-                if(this.count > 0){
+                if (this.count > 0) {
                     this.count--;
                     this.handlers.forEach((handler) => handler(this.count));
                 }
